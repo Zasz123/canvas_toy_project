@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 
 import { ICanvasCallback } from "./interface";
 
-function useCanvas(callback: ICanvasCallback) {
+function useCanvas(callback: ICanvasCallback, dependency: any[]) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
@@ -12,7 +12,7 @@ function useCanvas(callback: ICanvasCallback) {
       callback({ context, canvas });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [...dependency]);
 
   return canvasRef;
 }
