@@ -1,9 +1,9 @@
 import React from "react";
 
-import { useCanvas } from "../../../hooks/canvas";
-import { MoveWave } from "./canvas/moveWave";
+import { useCanvas } from "../../hooks/canvas";
+import MoveWave from "./canvas";
 
-import { CanSelectCanvas } from "../common/canvas";
+import { CanSelectCanvas } from "../common/canvas/canvas";
 
 const Wave = () => {
   const canvasRef = useCanvas(({ context, canvas }) => {

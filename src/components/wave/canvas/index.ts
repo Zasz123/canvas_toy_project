@@ -2,7 +2,7 @@ import { WaveGroup } from "./waveGroup";
 
 import { IMoveWave } from "../interface";
 
-export class MoveWave {
+class MoveWave {
   context: CanvasRenderingContext2D;
   canvas: HTMLCanvasElement;
   waveGroup: WaveGroup;
@@ -39,3 +39,5 @@ export class MoveWave {
     requestAnimationFrame(this.animate.bind(this));
   }
 }
+
+export default MoveWave;
