@@ -2,7 +2,7 @@ import { WaveGroup } from "./waveGroup";
 
 import { IMoveWave } from "../interface";
 
-class MoveWave {
+class WaveCanvas {
   context: CanvasRenderingContext2D;
   canvas: HTMLCanvasElement;
   waveGroup: WaveGroup;
@@ -40,4 +40,4 @@ class MoveWave {
   }
 }
 
-export default MoveWave;
+export default WaveCanvas;

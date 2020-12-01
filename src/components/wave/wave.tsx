@@ -1,16 +1,16 @@
 import React from "react";
 
 import { useCanvas } from "../../hooks/canvas";
-import MoveWave from "./canvas";
+import WaveCanvas from "./canvas";
 
-import { CanSelectCanvas } from "../common/canvas/canvas";
+import { CantSelectCanvas } from "../common/canvas/canvas";
 
 const Wave = () => {
   const canvasRef = useCanvas(({ context, canvas }) => {
-    window.requestAnimationFrame(() => new MoveWave({ context, canvas }));
+    window.requestAnimationFrame(() => new WaveCanvas({ context, canvas }));
   }, []);
 
-  return <CanSelectCanvas ref={canvasRef} />;
+  return <CantSelectCanvas ref={canvasRef} />;
 };
 
 export default Wave;
