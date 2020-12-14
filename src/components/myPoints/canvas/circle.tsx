@@ -9,14 +9,14 @@ interface IProps {
 
 class Circle extends Vector {
   color: IRGBType;
-  radius: number = 20;
+  radius: number = 10;
   constructor({ position, color }: IProps) {
     super(position);
     this.color = color;
   }
 
   update(opacity: number) {
-    this.radius += 20;
+    this.radius += 5;
     this.color.a = opacity;
   }
 

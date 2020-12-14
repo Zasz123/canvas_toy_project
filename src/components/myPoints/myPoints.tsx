@@ -4,14 +4,14 @@ import { CantSelectCanvas } from "../common/canvas/canvas";
 
 import { useCanvas } from "../../hooks/canvas";
 
-import ValueOfExistenceCanvas from "./canvas";
+import MyPointsCanvas from "./canvas";
 
-const ValueOfExistence = () => {
+const MyPoints = () => {
   const canvasRef = useCanvas(({ canvas, context }) => {
-    new ValueOfExistenceCanvas({ canvas, context });
+    new MyPointsCanvas({ canvas, context });
   }, []);
 
   return <CantSelectCanvas ref={canvasRef} />;
 };
 
-export default ValueOfExistence;
+export default MyPoints;
